@@ -11,7 +11,39 @@ body {
 	text-align : center;
 	background: linear-gradient(65deg, #800000, rgb(255,222,173), rgb(230,230,250), rgb(255,0,255), rgb(135,206,235));
 	color: #DC143C;
+	text-transform: uppercase;
 
+}
+header {
+	background-color: #55DDAA;
+}
+
+#logo {
+	margin: 0px auto;
+	padding: 0;
+	width: 100px;
+	float: left;
+}
+nav {
+	float: right;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 25px;
+}
+nav a {
+	color: #444;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bolder;
 }
 
 #slogan {
