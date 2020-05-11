@@ -1,0 +1,53 @@
+body {
+	background: linear-gradient(45deg, #CCFFFF, #FFCCCC)
+}
+
+.heading {
+	font-weight: bold;
+	font-family: Impact, fantasy;
+	font-size: 48px;
+	text-decoration-style: dashed;
+	text-decoration-line: underline; 
+	text-align : center;
+	background: linear-gradient(65deg, #800000, rgb(255,222,173), rgb(230,230,250), rgb(255,0,255), rgb(135,206,235));
+	color: #DC143C;
+
+}
+
+#slogan {
+	color: 	#4B0082;
+	font-family: sans-serif;
+	font-style: italic;
+	font-variant: small-caps;
+	margin-right: 20px;
+	height: 40px;
+	width: 30%;
+	animation-name: movement;
+	animation-duration: 10s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	align-self: auto;
+}
+
+@keyframes movement {
+  0% {
+    background-color: #FFFAFA;
+    margin-left: 0px;
+  }
+  25% {
+    background-color: #FFE4E1;
+    margin-left: 400px;
+  }
+  50% {
+    background-color: rgb(255,105,180);
+    margin-left: 800px;
+  }
+  75% {
+  	background-color: #FFE4E1;
+  	margin-left: 400px;
+  }
+  100%{
+  	background-color: #FFFAFA;
+  	margin-left: 0px
+  }
+}
