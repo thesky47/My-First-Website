@@ -1,7 +1,3 @@
-body {
-	background: linear-gradient(45deg, #CCFFFF, #FFCCCC)
-}
-
 .heading {
 	font-weight: bold;
 	font-family: Impact, fantasy;
@@ -9,41 +5,99 @@ body {
 	text-decoration-style: dashed;
 	text-decoration-line: underline; 
 	text-align : center;
-	background: linear-gradient(65deg, #800000, rgb(255,222,173), rgb(230,230,250), rgb(255,0,255), rgb(135,206,235));
+	background: linear-gradient(35deg, #800000, rgb(255,222,173), rgb(230,230,250), rgb(225,0,255), rgb(135,206,235));
 	color: #DC143C;
 	text-transform: uppercase;
 
 }
 header {
 	background-color: #55DDAA;
+	align-content: left;
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: montserrat;
+
 }
 
 #logo {
-	margin: 0px auto;
-	padding: 0;
-	width: 100px;
+	margin: 0px;
+	padding: 0px;
+	width: 150px;
 	float: left;
+	align-self: left;
+	align-content: left;
+	align-items: left;
 }
 nav {
 	float: right;
 }
 
 nav ul {
-	margin: 0px;
+	margin-right: 20px;
 	padding: 0px;
 	list-style: none;
 }
-nav li {
+nav ul li {
 	display: inline-block;
 	margin-left: 70px;
 	padding-top: 25px;
+	line-height: 20px;
+	position: relative;
 }
 nav a {
 	color: #444;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bolder;
+	padding: 7px,13px;
+	border-radius: 4px;
+}
+
+nav a:hover {
+	color: #000;
+	font-size: 26px;
+	font-style: italic;
+	background-color: #7FFFD4;
+	padding: 2px; 
+}
+
+nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 0%;
+	background-color: #444;
+	position: absolute;
+	top: 0px;
+	margin-top: 0px;
+
+	transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+
+.checkbtn {
+	font-size: 30px;
+	color: #444;
+	float: right;
+	margin: 0px;
+	line-height: 100px;
+	margin-right: 40px;
+	cursor:  pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+body {
+
 }
 
 #slogan {
@@ -58,7 +112,6 @@ nav a {
 	animation-duration: 10s;
 	animation-delay: 2s;
 	animation-iteration-count: infinite;
-	align-self: auto;
 }
 
 @keyframes movement {
@@ -80,6 +133,46 @@ nav a {
   }
   100%{
   	background-color: #FFFAFA;
-  	margin-left: 0px
+  	margin-left: 0px;
   }
+}
+
+@media (max-width: 1000px) {
+	nav ul li a {
+		font-size: 16px
+	}
+@media (max-width: 950px){
+	.checkbtn {
+		display: block;
+	}
+	nav ul {
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		background-color: #2c3e50;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5;
+	}
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	nav ul li a {
+		font-size: 20px;
+		color: #0082e6;
+	}
+	
+	a:hover,a.active {
+		background: none;
+		color: #0083E6;
+	}
+
+	#check:checked ~ ul {
+		left: 0;
+
+	}
 }
