@@ -1,3 +1,4 @@
+/* master styles*/
 .heading {
 	font-weight: bold;
 	font-family: Impact, fantasy;
@@ -17,9 +18,19 @@ header {
 	margin: 0px;
 	text-decoration: none;
 	box-sizing: border-box;
-	font-family: montserrat;
+	font-family: 'Balsamiq Sans', cursive;
+	display: flex;
+	justify-content: space-between;
 
 }
+
+body {
+	margin: 0px;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+/* NavBar styles */
 
 #logo {
 	margin: 0px;
@@ -30,6 +41,7 @@ header {
 	align-content: left;
 	align-items: left;
 }
+
 nav {
 	float: right;
 }
@@ -60,7 +72,6 @@ nav a:hover {
 	color: #000;
 	font-size: 26px;
 	font-style: italic;
-	background-color: #7FFFD4;
 	padding: 2px; 
 }
 
@@ -73,7 +84,6 @@ nav a::before {
 	position: absolute;
 	top: 0px;
 	margin-top: 0px;
-
 	transition: all ease-in-out 200ms;
 }
 
@@ -95,14 +105,11 @@ nav a:hover::before {
 #check {
 	display: none;
 }
-
-body {
-
-}
+/* Slogan */
 
 #slogan {
 	color: 	#4B0082;
-	font-family: sans-serif;
+	font-family: 'Balsamiq Sans', cursive;
 	font-style: italic;
 	font-variant: small-caps;
 	margin-right: 20px;
@@ -114,6 +121,80 @@ body {
 	animation-iteration-count: infinite;
 }
 
+/* Content of body */
+.content-wrapper {
+
+}
+
+.items-wrapper {
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr;
+
+}
+
+.item-wrapper {
+	position: relative;
+
+}
+
+.img-text {
+	margin-bottom: 10px;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-right: 20px;
+	padding-left: 20px;
+
+}
+
+.image img {
+	height: 350px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+.img-text .subtext {
+	font-family: 'Balsamiq Sans', cursive;
+	transition: 1s;
+	font-weight: 600;
+}
+
+.img-text:hover .subtext {
+	font-weight: 600;
+	color: lightseagreen;
+}
+
+/* About Page*/
+
+.two-column-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.profile-img-wrapper img {
+	width: 100%
+}
+
+.about {
+	padding: 30px;
+
+}
+
+.about h1{
+	font-family: 'Balsamiq Sans', cursive;
+	color: lightseagreen;
+}
+
+.about p {
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+/* Media and KeyFrames */
 @keyframes movement {
   0% {
     background-color: #FFFAFA;
@@ -137,6 +218,7 @@ body {
   }
 }
 
+/* Media styles */
 @media (max-width: 1000px) {
 	nav ul li a {
 		font-size: 16px
