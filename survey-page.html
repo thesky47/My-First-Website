@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Survey Page</title>
+
+	<link rel="stylesheet" type="text/css" href="survy.css">
+
+</head>
+
+<body>
+
+	<header>
+  		<h1 id="title">Site Survey Form</h1>
+  		<p id="description">Help us to improve by sharing your     experience, ThankYou for your time!</p>
+	</header>
+
+	<form id="survey-form">
+  	<div class="group">
+    	<label id="name-label" for="name">Name</label>
+    	<input id="name" type="text" placeholder="Enter your name" required>
+	</div>
+    <div class="group">
+    	<label id="email-label" for="email">E-mail</label>
+    	<input id="email" type="email" placeholder="Enter your Email" required>
+	</div>
+    <div class="group">
+    	<label id="number-label" for="number">How many hours you spend on studies everyday ?<span class='hint'>(optional)</span></label>
+    	<input id="number" type="number" placeholder="Enter your study time" min=0 max=20>
+	</div>
+    <div class="group">
+    	<label id="dropdown-label" for="dropdown">What is your highest education level?</label>
+      	<select id="dropdown">
+        	<option disabled selected value>select eduction</option>
+        	<option value ='school'>Secondary School</option>
+        	<option value ='higher-secondary'>Higher Secondary School</option>
+	        <option value ='diploma'>Diploma</option>
+	        <option value ='degree'>Degree</option>
+	        <option value ='higher'>Post-Degree</option>
+	        <option value = 'nottell'>Prefer not to say</option>
+	        <option value ='other'>Other</option>
+      	</select>
+  	</div>
+    <div class="group">
+     	<p>Would you recommend us to a friend</p>
+      	<label>
+       		<input  name="recommend" class="radio" type="radio" value="for-sure" checked/>For Sure
+      	</label>
+      	<label>
+        	<input  name="recommend" class="radio" type="radio" value="likely">Likely
+      	</label>
+       	<label>
+        	<input  name="recommend" class="radio" type="radio" value="not-sure">Not Sure
+      	</label>
+	</div>
+  	<div class="group">
+    	<p>What would you like to learn?<span class="hint">(Check all that apply)</span></p>
+    	<label class="check-box" >
+      		<input type="checkbox" value="speed-reading">Speed Reading
+      	</lable>
+    	<label class="check-box" >
+      		<input type="checkbox" value="prioritizing">Prioritizing Tasks
+      	</lable>
+    	<label class="check-box" >
+      		<input type="checkbox" value="body-language">Mastering Body Language
+      	</lable>
+    	<label class="check-box" >
+      		<input type="checkbox" value="video">Videography Skills
+      	</lable>
+    	<label class="check-box" >
+      		<input type="checkbox" value="humor">Learning Humor
+      	</lable>
+    	<label class="check-box" >
+      		<input type="checkbox" value="writing">Writing
+      	</lable>
+    	<label class="check-box" >
+      		<input  type="checkbox" value="language">Learning a New Language
+      	</lable>
+    	<label class="check-box">
+      		<input type="checkbox" value="delegating">The Art of Delegating
+      	</lable>
+  	</div>
+  	<div class="group">
+    	<p>Any comments or suggestions</p>
+    	<textarea id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
+  	</div>
+  	<input type="submit" id="submit">
+</form>
+</body>
+</html>
